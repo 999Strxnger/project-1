@@ -581,8 +581,53 @@ body.nav-active { overflow: hidden; }
 }
 
 
+/* POPUP DISCLAIMER */
+#popup {
+  display: block; /* Popup ist sichtbar beim Laden */
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background-color: rgba(0, 0, 0, 0.7); /* Fast transparenter Hintergrund */
+  color: white; /* Weiße Schrift */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  border-radius: 8px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  font-family: Arial, sans-serif;
+}
 
+/* Close-Button (X) oben rechts */
+#close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
 
+#close-popup:hover {
+  color: rgb(192, 165, 165); /* Rote Farbe beim Hover */
+}
+
+/* Text innerhalb des Popups */
+#popup p {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.red-text {
+  color: rgb(255, 65, 65);
+  font-weight: bold;
+}
 
 /*-----------------------------------*\
   #TOPBAR
