@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 /**
  * PRELOAD
  * 
@@ -15,8 +13,6 @@ window.addEventListener("load", function () {
   document.body.classList.add("loaded");
 });
 
-
-
 /**
  * add event listener on multiple elements
  */
@@ -26,8 +22,6 @@ const addEventOnElements = function (elements, eventType, callback) {
     elements[i].addEventListener(eventType, callback);
   }
 }
-
-
 
 /**
  * NAVBAR
@@ -44,8 +38,6 @@ const toggleNavbar = function () {
 }
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
-
-
 
 /**
  * HEADER & BACK TOP BTN
@@ -77,8 +69,6 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
-
-
 
 /**
  * HERO SLIDER
@@ -142,8 +132,6 @@ addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide
 
 window.addEventListener("load", autoSlide);
 
-
-
 /**
  * PARALLAX EFFECT
  */
@@ -157,7 +145,6 @@ window.addEventListener("mousemove", function (event) {
   x = (event.clientX / window.innerWidth * 10) - 5;
   y = (event.clientY / window.innerHeight * 10) - 5;
 
-  // reverse the number eg. 20 -> -20, -5 -> 5
   x = x - (x * 2);
   y = y - (y * 2);
 
@@ -168,3 +155,18 @@ window.addEventListener("mousemove", function (event) {
   }
 
 });
+
+/**
+ * POPUP
+ */
+
+const popup = document.getElementById("popup");
+const closePopupButton = document.getElementById("close-popup");
+
+const closePopup = function () {
+  popup.style.display = "none";
+};
+
+closePopupButton.addEventListener("click", closePopup);
+
+setTimeout(closePopup, 10000);
